@@ -44,7 +44,32 @@ Borrow out = A'Bin + A'B + BBin
 write the detailed procedure here 1 type the program in quartes software.2 compile and run rhe program .3 generate the RTL schematic and save the logic diagram.4 create nodes for inputs and outputs to generate the timing diagram .5 for different input combinations generate the timing diagram
 
 **Program:**
-![Screenshot 2024-12-02 141233](https://github.com/user-attachments/assets/58cbac93-00c5-4053-9954-11e50efcd27f)
+
+module fa(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^c);
+
+assign carry= ( (a & b)| ( cin &(a ^ b ));
+
+endmodule
+
+FULL SUBTRACTOR
+
+module fs(a,b,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( ~a & b)|  ( bin & (~(a ^ b )));
+
+endmodule
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by:CH.Dinesh Kumar RegisterNumber:
 */24000305
